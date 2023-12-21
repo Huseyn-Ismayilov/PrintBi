@@ -1,0 +1,314 @@
+.account {
+    padding: 60px 0;
+    .sec_title {
+        display: flex;
+        align-items: center;
+        margin-bottom: 40px;
+
+        h2 {
+            color: $dark-color;
+            margin-bottom: 10px;
+        }
+
+        p {
+            color: $light-gray;
+        }
+        .icon {
+            margin-right: 16px;
+        }
+    }
+    .tabs {
+        display: flex;
+        .tab__list {
+            position: sticky;
+            top: 40px;
+            left: 0;
+            width: 330px;
+            height: fit-content;
+            flex-direction: column;
+            .tab__item {
+                width: fit-content;
+                &.is--active {
+                    background-color: #f2f4f9;
+                    border: unset;
+                }
+            }
+        }
+        .tab__content {
+            width: calc(100% - 330px);
+            padding: 0;
+            .wrap {
+                background: #fafbff;
+                padding: 50px 80px;
+            }
+        }
+    }
+    .block {
+        margin-bottom: 56px;
+        &:not(:last-child) {
+            margin-bottom: 70px;
+        }
+
+        .title {
+            margin-bottom: 24px;
+
+            h2 {
+                font-size: 24px;
+                color: $dark-color;
+                margin-bottom: 10px;
+            }
+
+            p {
+                font-size: 14px;
+                color: $light-gray;
+            }
+            .icon {
+                margin-right: 16px;
+            }
+        }
+
+        .titleWithIcon {
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+            margin-bottom: 30px;
+
+            .icon {
+                margin-top: -10px;
+            }
+
+            p {
+                color: $light-gray;
+            }
+        }
+
+        .form_wrap {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 24px 40px;
+            border-radius: 16px;
+        }
+
+        .form_element {
+            width: calc(50% - 40px / 2);
+            display: flex;
+            flex-direction: column;
+
+            label {
+                display: block;
+                margin-bottom: 10px;
+                color: $light-gray;
+                .required {
+                    color: $bean-red;
+                }
+            }
+
+            input {
+                width: 100%;
+                height: 48px;
+                border: 1px solid #a8b4c5;
+                border-radius: 8px;
+                padding: 16px;
+            }
+            .select .custom-select-trigger {
+                border-radius: 8px;
+                background-color: white;
+            }
+            .select,
+            .custom-select-wrapper,
+            .custom-select {
+                width: 100%;
+            }
+
+            .custom-select-trigger {
+                color: $dark-color;
+            }
+
+            &.w-100 {
+                width: 100%;
+            }
+
+            .checkbox0a {
+                input {
+                    &:checked + .inner {
+                        .icon {
+                            rect {
+                                fill: $green-text;
+                                stroke: none;
+                            }
+                        }
+                    }
+                }
+
+                .inner {
+                    display: flex;
+
+                    .icon {
+                        display: inline-block;
+                        margin-right: 10px;
+
+                        rect {
+                            stroke: $light-gray;
+                        }
+                    }
+
+                    p {
+                        display: inline-block;
+                    }
+                }
+            }
+
+            .payment_btn {
+                @include lg-button();
+                cursor: pointer;
+                border-radius: 16px;
+                width: 100%;
+                max-width: 420px;
+                min-width: 150px;
+                background-color: $dark-color;
+                color: white;
+            }
+        }
+        .addNumber {
+            background-color: unset;
+            border: unset;
+            color: $green-text;
+            cursor: pointer;
+        }
+    }
+    .submit_btn {
+        @include lg-button();
+        margin-left: auto;
+        display: block;
+        background-color: $dark-text;
+        color: white;
+        border-radius: 16px;
+        width: 100%;
+        max-width: 340px;
+    }
+    .connectStore {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        .check {
+            margin-right: 16px;
+        }
+        .status {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-right: 16px;
+            p {
+                color: #6f778b;
+            }
+        }
+        .order_status {
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            gap: 32px;
+            .item {
+                text-align: center;
+                h4 {
+                    font-size: 24px;
+                    font-weight: 500;
+                }
+                span {
+                    color: #6f778b;
+                }
+            }
+        }
+        .connect_btn {
+            @include lg-button();
+            border: 2px solid $dark-color;
+            background-color: white;
+            font-size: 15px;
+            width: 100%;
+            max-width: 160px;
+            border-radius: 16px;
+            margin-right: 32px;
+            cursor: pointer;
+            &:hover {
+                opacity: 1;
+                background-color: #f3f3f3;
+            }
+        }
+        .settings_btn {
+            background-color: unset;
+            border: unset;
+        }
+    }
+    .verification_email {
+        padding: 26px;
+        background: rgba(253, 237, 88, 0.2);
+        border: 1px solid #fded5b;
+        border-radius: 16px;
+        margin-bottom: 24px;
+        p {
+            margin-bottom: 32px;
+            svg {
+                margin-bottom: -6px;
+            }
+        }
+        .verificate_btn {
+            @include md-button();
+            font-size: 14px;
+            line-height: 0.8;
+            background: #ffffff;
+            border: 2px solid $dark-color;
+            border-radius: 16px;
+            cursor: pointer;
+            &:hover{
+                background-color: rgb(241, 241, 241);
+            }
+        }
+    }
+}
+@media (max-width: 991px) {
+    .account {
+        padding: 35px 0;
+        .tabs {
+            flex-direction: column;
+            .tab__list {
+                width: 100%;
+                position: static;
+            }
+            .tab__content {
+                width: 100%;
+                .wrap {
+                    padding: 0;
+                    background-color: unset;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 768px) {
+    .account {
+        .tabs {
+            .tab__item {
+                font-size: 16px;
+            }
+        }
+        .sec_title {
+            svg {
+                width: 50px;
+                height: auto;
+            }
+            h2 {
+                font-size: 24px;
+            }
+            p {
+                font-size: 12px;
+            }
+        }
+        .block {
+            .form_element {
+                width: 100%;
+            }
+        }
+        .connectStore {
+            gap: 15px;
+        }
+    }
+}

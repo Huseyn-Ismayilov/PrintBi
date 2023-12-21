@@ -1,0 +1,70 @@
+*,
+::after,
+::before {
+    box-sizing: border-box;
+    text-decoration: none;
+    margin: 0;
+}
+
+body {
+    font-weight: 500;
+    font-family: 'Santral';
+    overflow-x: hidden;
+}
+
+body.overflow_hidden {
+    overflow: hidden;
+}
+html.noScroll {
+    overflow: hidden;
+}
+body.noScroll {
+    overflow: auto;
+    margin: 0;
+    max-height: 100vh;
+}
+
+input,
+select,
+textarea,
+button {
+    font: inherit;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    cursor: pointer;
+    text-decoration: none;
+    color: currentColor;
+    transition: .2s ease;
+}
+h1,h2,h3,h4 {
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+h2 {
+    font-size: 32px;
+}
+img {
+    max-width: 100%;
+    display: block;
+}
+
+.wrapper {
+    display: flex;
+    flex-wrap: wrap;
+}

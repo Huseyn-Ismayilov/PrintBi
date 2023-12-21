@@ -1,0 +1,13 @@
+@mixin lg-button () {
+    position: relative;
+    padding: 16px 24px;
+    border-radius: 99px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    border: 2px solid transparent;
+    &:hover {
+        opacity: .85;
+    }
+}
